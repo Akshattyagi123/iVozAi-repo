@@ -6,7 +6,7 @@ import Navbar from "./components/NavBar";
 
 function App() {
   return (
-    <div className="bg-gray-100 min-h-screen max-w-full border border-purple-500">
+    <div className="bg-gray-100 min-h-screen  border border-purple-500 2xl:w-[1720px]">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
