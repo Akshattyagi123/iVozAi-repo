@@ -4,5 +4,17 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
-})
+  plugins: [react()],
+  build: {
+    outDir: 'dist',
+  },
+  server: {
+    open: true,
+  },
+  // 👇 This part is key for React Router on Vercel
+  resolve: {
+    alias: {
+      '@': '/src',
+    },
+  },
+});
